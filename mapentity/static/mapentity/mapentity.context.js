@@ -25,7 +25,7 @@ MapEntity.Context = new function() {
 
         // Sort columns
         if (datatable) {
-            context['sortcolumns'] = datatable.fnSettings().aaSorting;
+            context['sortcolumns'][$('body').data('appname') + '_' + $('body').data('modelname')] = datatable.fnSettings().aaSorting;
         }
 
         // Extra-info, not restored so far but can be useful for screenshoting
@@ -116,7 +116,7 @@ MapEntity.Context = new function() {
             $(filter).find('select').trigger("liszt:updated");
         }
 
-        if (datatable && context.sortcolumns) {
+        if (datatable && context[$('body').data('appname') + '_' + $('body').data('modelname')].sortcolumns) {
             datatable.fnSort(context.sortcolumns);
         }
 
