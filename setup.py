@@ -23,7 +23,7 @@ setup(
     install_requires=[
         'appy>=0.9.10',
         'BeautifulSoup4>=4.6.0',
-        'Django>=1.9,<2',
+        'Django>=1.11,<2',
         'GDAL>=1.10',
         'gpxpy>=1.1.2',
         'django-appypod>=1.0.0',
